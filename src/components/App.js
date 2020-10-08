@@ -4,7 +4,7 @@ import Main from './Main.js';
 import Footer from './Footer.js';
 
 
-export default function Body() {
+export default function App() {
     return (
         <div>
             <Header />
@@ -13,3 +13,5 @@ export default function Body() {
         </div>
     );
 }
+
+// trazer a lógica do useState pra cá.
