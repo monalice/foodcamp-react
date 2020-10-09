@@ -95,7 +95,7 @@ footer {
     text-align: center;
 }
 
-#btn-footer {
+.btn-footer {
     font-family: 'Roboto', sans-serif;
     background-color: #cbcbcb;
     color: #fff;
@@ -114,6 +114,9 @@ footer {
 
 .select {
     border: 5px solid #32B72F;
+}
+.btn-select {
+    background-color: #32b72f;
 }
 /*
 ion-icon {

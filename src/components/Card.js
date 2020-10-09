@@ -25,5 +25,5 @@ export default function Card(props) {
   );
 }
 
-function amount() {
-}*/
+function amount() {}
+*/
