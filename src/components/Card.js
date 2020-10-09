@@ -1,29 +1,29 @@
 import React from 'react';
 
 export default function Card(props) {
+    var {option, increment, decrement, selected} = props;
+    var {select} = option;
 
     return (
         <div 
-            className={props.option.select ? "card, select" : "card"} 
-            onClick={() => props.selection(props.option)}>
-            <img src={props.option.imgSrc} />
-            <h4>{props.option.name}</h4>
-            <p className="description">{props.option.description}</p>
-            <p>{props.option.price}</p>
+            className={select > 0 ? "card, select" : "card"}>
+            <img onClick={() => selected(option)} src={option.imgSrc} />
+            <h4>{option.name}</h4>
+            <p className="description">{option.description}</p>
+            <p>{option.price}</p>
+            <Amount increment={increment} decrement={decrement} option={option} />
         </div>
     );
 }
 
-/*function Amount() {
-    var [value, setValue] =  useState(0);
+function Amount(props) {
+    var { increment, decrement, option} = props;
+    
     return (
-        <span>
-            <button onClick={() => setValue(value + 1)} >+</button>
-            <span>{value}</span>
-            <button onClick={() => setValue(value - 1)}>-</button>
+        <span className={option.select > 0 ? "cont" : "hidden"}>
+            <button onClick={() => decrement(option)}>-</button>
+            <span>{option.select}</span>
+            <button onClick={() => increment(option)}>+</button>
         </span>
   );
 }
-
-function amount() {}
-*/

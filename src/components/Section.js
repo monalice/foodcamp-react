@@ -7,9 +7,14 @@ export default function Section(props) {
         <>
             <h3 className="title">{props.section.title}</h3>
 
-            <section>
+            <section className="options">
             {props.section.options.map(option => 
-                <Card option={option} selection={props.selection} />)}
+                <Card 
+                    option={option}
+                    increment={props.increment}
+                    decrement={props.decrement}
+                    selected={props.selected}
+                />)}
             </section>
         </>
     ); 

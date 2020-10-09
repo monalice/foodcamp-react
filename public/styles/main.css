@@ -49,7 +49,7 @@ main {
 
 /*-------------------sections-----------------------*/
 
-section {
+.options {
     display: flex;
     height: 300px;
     width: auto;
@@ -71,10 +71,11 @@ section div {
     border-radius: 10px;
     margin: 15px 10px;
     padding: 10px;
-    box-shadow: 1px 1px 5px gray;   
+    box-shadow: 1px 1px 5px gray;
+    position: relative; 
 }
 
-section>div>img {
+section div img {
     height: 40%;
     object-fit: cover;
 }
@@ -104,6 +105,24 @@ footer {
     height: 40px;
     width: 80%;
     margin: 15px 20px;
+    padding: 0px 20%;
+}
+
+/*---------------------Review--------------------------*/
+.section-review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review {
+    width: 80%;
+    height: auto;
+    padding: 20px 15px;
+}
+.review .order {
+    display: flex;
+    justify-content: space-between;
 }
 
 /*---------------------miscellaneous---------------------*/
@@ -115,9 +134,33 @@ footer {
 .select {
     border: 5px solid #32B72F;
 }
+
 .btn-select {
     background-color: #32b72f;
 }
+
+.cont {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+.cont button{
+    font-size: 20px;
+    margin: 0px 5px;
+    width: 10px;
+    background-color: #fff;
+}
+.cont button:first-child{
+    color: red;
+}
+.cont button:last-child{
+    color: green;
+}
+
+.hidden {
+    display: none;
+}
+
 /*
 ion-icon {
     position: absolute;
