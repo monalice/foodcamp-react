@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export default function Card(props) {
 
-    var { imgSrc, name, description, price } = props;
-    var [classCard, setClass] =  useState(false);
-
     return (
         <div 
-            className={classCard ? "card, select" : "card"} 
-            onClick={() => setClass(!classCard)}>
-            <img src={imgSrc} />
-            <h4>{name}</h4>
-            <p className="description">{description}</p>
-            <p>{price}</p>
+            className={props.option.select ? "card, select" : "card"} 
+            onClick={() => props.selection(props.option)}>
+            <img src={props.option.imgSrc} />
+            <h4>{props.option.name}</h4>
+            <p className="description">{props.option.description}</p>
+            <p>{props.option.price}</p>
         </div>
     );
 }
@@ -20,10 +17,10 @@ export default function Card(props) {
 /*function Amount() {
     var [value, setValue] =  useState(0);
     return (
-        <span className="cell">
-            <button className="plus" onClick={() => setValue(value + 1)} >+</button>
-            <span className="value">{value}</span>
-            <button className="minus" onClick={() => setValue(value - 1)}>-</button>
+        <span>
+            <button onClick={() => setValue(value + 1)} >+</button>
+            <span>{value}</span>
+            <button onClick={() => setValue(value - 1)}>-</button>
         </span>
   );
 }
