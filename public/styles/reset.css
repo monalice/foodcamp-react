@@ -24,7 +24,7 @@ a {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, a, li {
+footer, header, hgroup, menu, nav, section, a {
 	display: block;
 }
 body {
